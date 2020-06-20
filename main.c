@@ -6,13 +6,15 @@
 // Crushtetris C-Project written by Leon Grant @ Humboldt University Berlin 
 // Summer Semester 2020 -- Digital Systems module
 
+int input(char *s, int length);
+
 int main(int argc, char** argv) 
 {
-	unsigned char buffer [BUFFERSIZE];
-	FILE *stream; //input stream
+	char *buffer;
+	size_t bufferSize = 32;
+	size_t characters;
 
-	int bytes = 0;
-	int bufferSize = 0;
+	buffer = (char * )malloc(bufferSize * sizeof(char));
 
 	/*
 	to-do (input):
